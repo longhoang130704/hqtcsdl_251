@@ -1,0 +1,10 @@
+import pydicom
+
+# path = r"D:/HCMUT-K22/HQTCSDL/btl/data/MRI_Data/01_MRI_Data/0008/L-SPINE_CLINICAL_LIBRARIES_20160605_112202_964000/LOCALIZER_0001/LOCALIZER_0_0008_001.ima"
+# path = r"D:\HCMUT-K22\HQTCSDL\btl\data\MRI_Data\01_MRI_Data\0008\L-SPINE_CLINICAL_LIBRARIES_20160605_112202_964000\LOCALIZER_0001\LOCALIZER_0_0008_002.ima"
+path = r"D:\HCMUT-K22\HQTCSDL\btl\data\MRI_Data\01_MRI_Data\0008\L-SPINE_CLINICAL_LIBRARIES_20160605_112202_964000\T1_TSE_SAG_320_0004\T1_TSE_SAG__0008_001.ima"
+ds = pydicom.dcmread(path)
+
+print("Patient ID:", ds.PatientID)
+print("Image shape:", ds.pixel_array.shape)
+print("Ds:", ds)
