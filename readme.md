@@ -1,8 +1,12 @@
 
 # import data 
 ```txt
-instruction in branch feat/tool_import_data
-only import text, image is update soon ...
+import text before import image
+1. create container
+2. create db: "hqtcsdl"
+3. create table
+4. import text
+5. import image
 ```
 # Gg sheet phân công nhiệm vụ
 ```
