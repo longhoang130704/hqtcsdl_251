@@ -1,3 +1,6 @@
+# Query case study
+script in file "query_case_study.md" 
+
 # Instruction
 
 ## 1. Install dependency
