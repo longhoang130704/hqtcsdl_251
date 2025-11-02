@@ -124,7 +124,8 @@ for patient_id in os.listdir(base_dir):
 
                     # ==== Tạo embedding 128 chiều ====
                     tensor = load_ima(img_path)
-                    embedding = get_embedding(tensor)
+                    # embedding = get_embedding(tensor)
+                    embedding = np.zeros(128)
 
                     # Insert vào bảng image
                     cur.execute("""
@@ -185,7 +186,7 @@ for patient_id in os.listdir(base_dir):
         patient_size, 
         patient_id
     ))
-    # print(f"✅ Xong patient {patient_id}")
+    print(f"✅ Xong patient {patient_id}")
     # break
 # ------------------ debug only ------------------
 

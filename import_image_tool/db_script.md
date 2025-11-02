@@ -22,8 +22,8 @@ CREATE TABLE patient (
 
 CREATE TABLE series (
     seri_id BIGINT PRIMARY KEY,           
-    study_id VARCHAR(50),                   
-    parent_id VARCHAR(50),                 
+    study_id VARCHAR(255),                   
+    parent_id VARCHAR(255),                 
     seri_link TEXT,                         
     seri_title VARCHAR(255),                
     seri_time TIMESTAMP,                    
@@ -51,4 +51,11 @@ CREATE TABLE image (
     body_part VARCHAR(100)             -- bộ phận cơ thể
 );
 --
+```
+
+## update table
+```
+-- update table 
+ALTER TABLE public.series ALTER COLUMN study_id TYPE varchar(255) USING study_id::varchar(255);
+ALTER TABLE public.series ALTER COLUMN parent_id TYPE varchar(255) USING parent_id::varchar(255);
 ```
